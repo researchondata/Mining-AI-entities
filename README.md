@@ -10,11 +10,9 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 >Running Mode: [`train`/`test`/`interactive_predict`/`api_service`]
 
 >Labeling Scheme: 
-    ```
 
         [`BIO`/`BIESO`]
 
-    ```
 >Model Configuration:
     ``` 
 
@@ -67,5 +65,5 @@ This is the code for the paper entitled 'Exploring developments of AI field from
     Step 3. Extract entities using the trained model
         ├── Set mode=test and is_real_test=True in 'system.config'
         ├── python main.py
-        
+
     ```
