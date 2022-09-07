@@ -1,31 +1,41 @@
 # Exploring developments of the AI field from the perspective of methods, datasets, and metrics
-This is the code for the paper entitled 'Exploring developments of AI field from the perspective of methods, datasets, and metrics'.
+This is the code for the paper entitled 'Exploring developments of AI field from the perspective of methods, datasets, and metrics.'
 
 ## Code details
 
 **Requirements:**  
 >Python=3.6, Tensorflow=1.10.0, numpy==1.15.4, and pandas==0.20.3
 
-## Configurations
-    - Running Mode: [`train`/`test`/`interactive_predict`/`api_service`]
-    - Datasets(Input/Output): 
-    - Labeling Scheme: 
-        - [`BIO`/`BIESO`]
-        - [`PER`|`LOC`|`ORG`]
-        - ...
-    - Model Configuration: 
-        - encoder: BGU/Bi-LSTM, layer, Bi/Uni-directional
-        - decoder: crf/softmax
-        - embedding level: char/word
-        - with/without self attention
-        - hyperparameters
-    - Training Settings: 
-        - subscribe measuring metrics: [precision,recall,f1,accuracy]
-        - optimazers: GD/Adagrad/AdaDelta/RMSprop/Adam
-    - Testing Settings
-    - Api service Settings
+**Configurations** 
+>Running Mode: [`train`/`test`/`interactive_predict`/`api_service`]
+>Datasets(Input/Output): 
+>Labeling Scheme: 
+    >[`BIO`/`BIESO`]
+    >[`PER`|`LOC`|`ORG`]
+>Model Configuration: 
+    >encoder: BGU/Bi-LSTM, layer, Bi/Uni-directional
+    >decoder: crf/softmax
+    >embedding level: char/word
+    >with/without self attention
+    >hyperparameters
+>Training Settings: 
+    >subscribe measuring metrics: [precision,recall,f1,accuracy]
+    >optimazers: GD/Adagrad/AdaDelta/RMSprop/Adam
+>Testing Settings
+>Api service Settings
     
-see more in [HandBook](HandBook.md).
+>see more in [HandBook](HandBook.md).
+
+**Train and Test**  
+>1. Train the model, you need to download the pretrained model [SciBERT] if you want to use the pretrained vector.
+
+>2. Run the following command to train or evaluate the model.
+
+```shell
+python train_choose.py  
+python test_with_choose.py
+python train_judge.py  
+python test_with_judge.py
 
 ## Module Structure
 ```
@@ -35,25 +45,8 @@ see more in [HandBook](HandBook.md).
 ├── HandBook.md
 ├── README.md
 │
-├── checkpoints
-│   ├── BILSTM-CRFs-datasets1
-│   │   ├── checkpoint
-│   │   └── ...
-│   └── ...
-├── data
-│   ├── example_datasets6
-│   │   ├── logs
-│   │   ├── vocabs
-│   │   ├── test.csv
-│   │   ├── train.csv
-│   │   └── dev.csv
-│   └── ...
-├── demo_webapp
-│   ├── demo_webapp
-│   ├── interface
-│   └── manage.py
 ├── engines
-       ├── BiLSTM_CRFs.py
+     ├── Model_Structure.py
      ├── Configer.py
      ├── DataManager.py
      └── utils.py
@@ -72,9 +65,7 @@ see more in [HandBook](HandBook.md).
     - `Configer.py` 是将`system.config`文件中设置的参数写入的程序.
     - `DataManager.py` 数据预处理程序，包括将训练集、验证集和测试集转化成模型可直接输入的数据，以及构建相关词典，设置词向量获取方式等.
  
-## Quick Start
 
-Under following steps:
 
 #### step 1. 将相关模型参数设置在 `system.config`文件中.
 
