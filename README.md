@@ -13,21 +13,21 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 
 >Labeling Scheme: 
 ```
-    >[`BIO`/`BIESO`]
-    >[`PER`|`LOC`|`ORG`]
+    [`BIO`/`BIESO`]
+    [`PER`|`LOC`|`ORG`]
 ```
 >Model Configuration:
 ``` 
-    >encoder: BGU/Bi-LSTM, layer, Bi/Uni-directional
-    >decoder: crf/softmax
-    >embedding level: char/word
-    >with/without self attention
-    >hyperparameters
+    encoder: BGU/Bi-LSTM, layer, Bi/Uni-directional
+    decoder: crf/softmax
+    embedding level: char/word
+    with/without self attention
+    hyperparameters
 ```
 >Training Settings: 
 ```
-    >subscribe measuring metrics: [precision,recall,f1,accuracy]
-    >optimazers: GD/Adagrad/AdaDelta/RMSprop/Adam
+    subscribe measuring metrics: [precision,recall,f1,accuracy]
+    optimazers: GD/Adagrad/AdaDelta/RMSprop/Adam
 ```
 >Testing Settings
 >Api service Settings
