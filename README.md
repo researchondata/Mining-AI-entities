@@ -30,7 +30,7 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 >See more in [HandBook](HandBook.md).
 
 **Train and Test**  
->1. Train the model, you need to download the pretrained model [SciBERT] if you want to use the pretrained vector.
+>1. When training the model, you need to download the pretrained model [SciBERT] if you want to use the pretrained vector.
 
 >2. Module Structure
 ```shell
@@ -48,12 +48,12 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 >3. Run the following command to train or evaluate the model.
 
 ```shell
-Step 1. Train the model
->Set mode=train in 'system.config'
->python main.py
-Step 2. Test the model
->Set mode=test and is_real_test=False in 'system.config'
->python main.py
-Step 3. Extract entities using the trained model
->Set mode=test and is_real_test=True in 'system.config'
->python main.py
+├── Step 1. Train the model
+     ├── Set mode=train in 'system.config'
+     ├── python main.py
+├── Step 2. Test the model
+     ├── Set mode=test and is_real_test=False in 'system.config'
+     ├── python main.py
+├── Step 3. Extract entities using the trained model
+     ├── Set mode=test and is_real_test=True in 'system.config'
+     ├── python main.py
