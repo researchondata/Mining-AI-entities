@@ -10,11 +10,11 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 >Running Mode: [`train`/`test`/`interactive_predict`/`api_service`]
 
 >Labeling Scheme: 
-```
+```shell
     [`BIO`/`BIESO`]
 ```
 >Model Configuration:
-``` 
+``` shell
     encoder: CNN/BiLSTM
     decoder: crf/softmax
     embedding level: char/word
@@ -22,7 +22,7 @@ This is the code for the paper entitled 'Exploring developments of AI field from
     hyperparameters
 ```
 >Training Settings: 
-```
+```shell
     Metrics: [precision,recall,f1,accuracy]
     Optimizer: GD/Adagrad/AdaDelta/RMSprop/Adam
 ```
@@ -38,7 +38,6 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 ├── system.config
 ├── HandBook.md
 ├── README.md
-│
 ├── engines
      ├── Model_Structure.py
      ├── Configer.py
@@ -49,11 +48,14 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 
 ```shell
 Step 1. Train the model
-    ├── Set mode=train \\in 'system.config'
+    ├── Set mode=train in 'system.config'
     ├── python main.py
+
 Step 2. Test the model
-    ├── Set mode=test and is_real_test=False \\in 'system.config'
+    ├── Set mode=test and is_real_test=False in 'system.config'
     ├── python main.py
+
 Step 3. Extract entities using the trained model
-    ├── Set mode=test and is_real_test=True \\in 'system.config'
+    ├── Set mode=test and is_real_test=True in 'system.config'
     ├── python main.py
+```
