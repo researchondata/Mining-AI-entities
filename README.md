@@ -9,11 +9,11 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 **Configurations:** 
 >Running Mode
 
-        [`train`/`test`/`interactive_predict`/`api_service`]
+        ['train'/'test'/'interactive_predict'/'api_service']
 
 >Labeling Scheme: 
 
-        [`BIO`/`BIESO`]
+        ['BIO'/'BIESO']
 
 >Model Configuration:
 
