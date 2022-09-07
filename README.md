@@ -10,21 +10,27 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 >Running Mode: [`train`/`test`/`interactive_predict`/`api_service`]
 
 >Labeling Scheme: 
-    ```shell
+    ```
+
         [`BIO`/`BIESO`]
+
     ```
 >Model Configuration:
-    ``` shell
+    ``` 
+
         encoder: CNN/BiLSTM
         decoder: crf/softmax
         embedding level: char/word
         with/without self attention
         hyperparameters
+
     ```
 >Training Settings: 
-    ```shell
+    ```
+
         Metrics: [precision,recall,f1,accuracy]
         Optimizer: GD/Adagrad/AdaDelta/RMSprop/Adam
+
     ```
     
 >See more in [HandBook](HandBook.md).
@@ -33,7 +39,8 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 >1. When training the model, you need to download [SciBERT](https://github.com/allenai/scibert), [BERT](https://github.com/google-research/bert), or [GloVe](https://nlp.stanford.edu/projects/glove/) if you want to use the pretrained vectors.
 
 >2. Module Structure
-    ```shell
+    ```
+
     ├── main.py
     ├── system.config
     ├── HandBook.md
@@ -43,10 +50,12 @@ This is the code for the paper entitled 'Exploring developments of AI field from
        ├── Configer.py
        ├── DataManager.py
        └── utils.py
+    
     ```
 >3. Run the following command to train or evaluate the model.
 
-    ```shell
+    ```
+
     Step 1. Train the model
         ├── Set mode=train in 'system.config'
         ├── python main.py
@@ -58,4 +67,5 @@ This is the code for the paper entitled 'Exploring developments of AI field from
     Step 3. Extract entities using the trained model
         ├── Set mode=test and is_real_test=True in 'system.config'
         ├── python main.py
+        
     ```
