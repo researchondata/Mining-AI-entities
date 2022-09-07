@@ -9,16 +9,13 @@ This is the code for the paper entitled 'Exploring developments of AI field from
 **Configurations** 
 >Running Mode: [`train`/`test`/`interactive_predict`/`api_service`]
 
->Datasets(Input/Output)
-
 >Labeling Scheme: 
 ```
     [`BIO`/`BIESO`]
-    [`PER`|`LOC`|`ORG`]
 ```
 >Model Configuration:
 ``` 
-    encoder: BGU/Bi-LSTM, layer, Bi/Uni-directional
+    encoder: CNN/BiLSTM
     decoder: crf/softmax
     embedding level: char/word
     with/without self attention
@@ -29,10 +26,8 @@ This is the code for the paper entitled 'Exploring developments of AI field from
     subscribe measuring metrics: [precision,recall,f1,accuracy]
     optimazers: GD/Adagrad/AdaDelta/RMSprop/Adam
 ```
->Testing Settings
->Api service Settings
     
->see more in [HandBook](HandBook.md).
+>See more in [HandBook](HandBook.md).
 
 **Train and Test**  
 >1. Train the model, you need to download the pretrained model [SciBERT] if you want to use the pretrained vector.
