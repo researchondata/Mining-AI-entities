@@ -1,5 +1,5 @@
 # Exploring developments of the AI field from the perspective of methods, datasets, and metrics
-This is the code for the paper entitled 'Exploring developments of AI field from the perspective of methods, datasets, and metrics.'
+This is the code for the paper entitled 'Exploring developments of the AI field from the perspective of methods, datasets, and metrics.'
 
 ## Code details
 
